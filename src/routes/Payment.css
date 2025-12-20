@@ -1,0 +1,172 @@
+.payment-page {
+    padding-top: 120px;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.payment-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.payment-form-wrapper {
+    padding: 2.5rem;
+}
+
+.payment-header {
+    margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.payment-btn {
+    margin-top: 1rem;
+}
+
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.payment-secure {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.secure-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success-400);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Success State */
+.payment-success {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--success-500);
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.payment-success h1 {
+    margin-bottom: 0.5rem;
+}
+
+.organization-info {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.organization-info h4 {
+    color: var(--neutral-100);
+    margin-bottom: 0.5rem;
+}
+
+.organization-info p {
+    font-size: 0.9375rem;
+    color: var(--neutral-300);
+    margin: 0.25rem 0;
+}
+
+.organization-info code {
+    background: var(--neutral-800);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-family: monospace;
+    color: var(--primary-400);
+}
+
+.email-links {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+}
+
+.email-links h3 {
+    margin-bottom: 0.5rem;
+}
+
+.email-link-card {
+    background: var(--neutral-800);
+    border: 1px solid var(--neutral-700);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.email-link-card:last-child {
+    margin-bottom: 0;
+}
+
+.email-role {
+    margin-bottom: 0.75rem;
+}
+
+.email-address {
+    font-size: 1.125rem;
+    color: var(--neutral-100);
+    margin-bottom: 1rem;
+}
+
+.success-info {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.success-info ol {
+    margin: 0.75rem 0 0 1.25rem;
+    padding: 0;
+}
+
+.success-info li {
+    margin-bottom: 0.5rem;
+}
+
+.success-info a {
+    color: var(--primary-400);
+}

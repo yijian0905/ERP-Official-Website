@@ -1,0 +1,146 @@
+.subscribe-page {
+    padding-top: 120px;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.subscribe-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.subscribe-form-wrapper {
+    padding: 2.5rem;
+}
+
+.subscribe-header {
+    margin-bottom: 2rem;
+}
+
+.subscribe-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.form-divider span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--neutral-400);
+    white-space: nowrap;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--neutral-700);
+}
+
+.form-hint {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--neutral-500);
+    margin-top: 0.25rem;
+}
+
+.subscribe-btn {
+    margin-top: 1rem;
+}
+
+/* Summary Card */
+.subscribe-summary {
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.subscribe-summary h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-plan {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--neutral-700);
+    margin-bottom: 1rem;
+}
+
+.summary-plan-name {
+    font-weight: 600;
+    color: var(--neutral-100);
+}
+
+.summary-plan-price {
+    font-weight: 700;
+    color: var(--primary-400);
+}
+
+.summary-details {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.summary-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.9375rem;
+    color: var(--neutral-300);
+}
+
+.summary-details li::before {
+    content: '✓';
+    color: var(--success-400);
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid var(--neutral-700);
+    font-weight: 600;
+}
+
+.summary-total span:last-child {
+    font-size: 1.25rem;
+    color: var(--neutral-50);
+}
+
+.summary-note {
+    font-size: 0.8125rem;
+    color: var(--neutral-500);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .subscribe-content {
+        grid-template-columns: 1fr;
+    }
+
+    .subscribe-summary {
+        position: static;
+        order: -1;
+    }
+}
