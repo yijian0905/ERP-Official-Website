@@ -43,9 +43,22 @@ async function apiRequest<T>(
 export interface SubscriptionData {
     organizationName: string;
     billingEmail: string;
+    billingName: string;
     adminEmail?: string;
+    adminName?: string;
     plan: 'basic' | 'pro' | 'enterprise';
     sameEmail: boolean;
+    // Billing Address (extended)
+    billingCountry?: string;
+    billingAddress1?: string;
+    billingAddress2?: string;
+    billingCity?: string;
+    billingState?: string;
+    billingPostcode?: string;
+    taxId?: string;
+    // Locale settings
+    defaultCurrency?: string;
+    defaultTimezone?: string;
 }
 
 export interface SubscriptionResult {
@@ -88,6 +101,7 @@ export interface ActivationResult {
 
 export interface TokenVerifyResult {
     email: string;
+    name: string;
     role: string;
     organizationName: string;
 }

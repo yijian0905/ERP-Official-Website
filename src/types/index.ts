@@ -13,6 +13,7 @@ export interface Organization {
 // User Types
 export interface User {
     id: string;
+    name: string;
     email: string;
     passwordHash: string;
     role: 'billing_owner' | 'admin' | 'user';
@@ -34,10 +35,23 @@ export interface SubscriptionPlan {
 // Form Types
 export interface SubscriptionFormData {
     billingEmail: string;
+    billingName: string;
     adminEmail: string;
+    adminName: string;
     sameEmail: boolean;
     selectedPlan: string;
     organizationName: string;
+    // Billing Address (extended)
+    billingCountry?: string;
+    billingAddress1?: string;
+    billingAddress2?: string;
+    billingCity?: string;
+    billingState?: string;
+    billingPostcode?: string;
+    taxId?: string;
+    // Locale settings (auto-determined)
+    defaultCurrency?: string;
+    defaultTimezone?: string;
 }
 
 // Auth Context Types

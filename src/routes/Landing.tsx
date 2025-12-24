@@ -54,7 +54,9 @@ export function Landing() {
     const handleSelectPlan = (planId: string) => {
         savePendingSubscription({
             billingEmail: '',
+            billingName: '',
             adminEmail: '',
+            adminName: '',
             sameEmail: false,
             selectedPlan: planId,
             organizationName: '',

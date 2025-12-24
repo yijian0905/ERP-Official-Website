@@ -40,9 +40,22 @@ export function Payment() {
         const response = await createSubscription({
             organizationName: pendingData.organizationName,
             billingEmail: pendingData.billingEmail,
+            billingName: pendingData.billingName,
             adminEmail: pendingData.sameEmail ? undefined : pendingData.adminEmail,
+            adminName: pendingData.sameEmail ? undefined : pendingData.adminName,
             plan: pendingData.selectedPlan as 'basic' | 'pro' | 'enterprise',
             sameEmail: pendingData.sameEmail,
+            // Billing Address
+            billingCountry: pendingData.billingCountry,
+            billingAddress1: pendingData.billingAddress1,
+            billingAddress2: pendingData.billingAddress2,
+            billingCity: pendingData.billingCity,
+            billingState: pendingData.billingState,
+            billingPostcode: pendingData.billingPostcode,
+            taxId: pendingData.taxId,
+            // Locale settings
+            defaultCurrency: pendingData.defaultCurrency,
+            defaultTimezone: pendingData.defaultTimezone,
         });
 
         if (!response.success) {

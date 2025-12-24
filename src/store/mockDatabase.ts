@@ -89,6 +89,7 @@ export function createUser(data: Partial<User>): User {
     const users = getUsers();
     const newUser: User = {
         id: generateId(),
+        name: data.name || '',
         email: data.email || '',
         passwordHash: '',
         role: data.role || 'user',
@@ -229,6 +230,7 @@ export function processPayment(): PaymentResult {
 
     // Create billing owner
     const billingOwner = createUser({
+        name: pendingData.billingName,
         email: pendingData.billingEmail,
         role: pendingData.sameEmail ? 'admin' : 'billing_owner',
         organizationId: organization.id,
@@ -246,6 +248,7 @@ export function processPayment(): PaymentResult {
     // Create admin if different email
     if (!pendingData.sameEmail && pendingData.adminEmail !== pendingData.billingEmail) {
         const admin = createUser({
+            name: pendingData.adminName,
             email: pendingData.adminEmail,
             role: 'admin',
             organizationId: organization.id,

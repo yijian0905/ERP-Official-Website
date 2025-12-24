@@ -131,9 +131,9 @@ export function SetupPassword() {
             <div className="container">
                 <div className="setup-content card card-glass animate-slideUp">
                     <div className="setup-header">
-                        <h1>Set Up Your Password</h1>
+                        <h1>Welcome, {tokenData?.name}!</h1>
                         <p className="text-muted">
-                            Create a password for <strong>{tokenData?.email}</strong>
+                            Set up your password to activate your account
                         </p>
                         <div className="setup-info mt-4">
                             <span className="badge badge-info">
@@ -141,6 +141,9 @@ export function SetupPassword() {
                             </span>
                             <span className="org-name">{tokenData?.organizationName}</span>
                         </div>
+                        <p className="text-sm text-muted mt-2">
+                            Email: {tokenData?.email}
+                        </p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="setup-form">
