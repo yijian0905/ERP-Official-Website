@@ -12,6 +12,7 @@ const PLANS = [
         features: [
             'Core ERP Features',
             'Inventory Management',
+            'E-Invoice Submission (LHDN)',
             'Basic Reporting',
             'Email Support',
             'Up to 5 Users',
@@ -25,7 +26,8 @@ const PLANS = [
         popular: true,
         features: [
             'Everything in Basic',
-            'Advanced Analytics',
+            'Advanced E-Invoice (Auto-sync)',
+            'Credit/Debit Note Support',
             'Multi-location Support',
             'API Access',
             'Priority Support',
@@ -39,7 +41,8 @@ const PLANS = [
         seatLimit: 100,
         features: [
             'Everything in Professional',
-            'Custom Integrations',
+            'Self-Billed Invoice Support',
+            'Bulk E-Invoice Processing',
             'Dedicated Account Manager',
             'SLA Guarantee',
             'On-premise Option',
@@ -70,20 +73,28 @@ export function Landing() {
             <section className="hero glow-bg">
                 <div className="container">
                     <div className="hero-content animate-slideUp">
-                        <div className="hero-badge">🚀 Enterprise-Grade ERP Solution</div>
+                        <div className="hero-badges">
+                            <div className="hero-badge lhdn-badge">🇲🇾 LHDN e-Invoice Ready</div>
+                            <div className="hero-badge">🚀 Enterprise-Grade ERP Solution</div>
+                        </div>
                         <h1 className="hero-title">
-                            Streamline Your <span className="text-gradient">Business Operations</span>
+                            Malaysia's <span className="text-gradient">E-Invoice Compliant</span> ERP System
                         </h1>
                         <p className="hero-description">
-                            All-in-one enterprise resource planning system designed for modern businesses.
-                            Manage inventory, sales, purchasing, and more with ease.
+                            Be ready for LHDN's mandatory e-Invoice requirements.
+                            Our all-in-one ERP system ensures your business stays compliant
+                            while streamlining inventory, sales, and financial operations.
                         </p>
+                        <div className="compliance-note">
+                            <span className="compliance-icon">✅</span>
+                            <span>Compliant with LHDN MyInvois API • Real-time validation • QR code generation</span>
+                        </div>
                         <div className="hero-actions">
                             <a href="#pricing" className="btn btn-primary btn-lg">
                                 View Pricing
                             </a>
-                            <a href="#features" className="btn btn-secondary btn-lg">
-                                Learn More
+                            <a href="#einvoice" className="btn btn-secondary btn-lg">
+                                Learn About E-Invoice
                             </a>
                         </div>
                     </div>
@@ -101,6 +112,11 @@ export function Landing() {
                     </div>
 
                     <div className="features-grid">
+                        <div className="feature-card card card-glass card-hover">
+                            <div className="feature-icon">🧾</div>
+                            <h4>E-Invoice (LHDN)</h4>
+                            <p>Automatic submission to MyInvois, real-time validation, and QR code generation.</p>
+                        </div>
                         <div className="feature-card card card-glass card-hover">
                             <div className="feature-icon">📦</div>
                             <h4>Inventory Management</h4>
@@ -126,10 +142,69 @@ export function Landing() {
                             <h4>Team Management</h4>
                             <p>Role-based access control and activity tracking.</p>
                         </div>
-                        <div className="feature-card card card-glass card-hover">
-                            <div className="feature-icon">🔌</div>
-                            <h4>Integrations</h4>
-                            <p>Connect with your favorite tools and services via API.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* E-Invoice Section */}
+            <section id="einvoice" className="section einvoice-section glow-bg">
+                <div className="container">
+                    <div className="section-header text-center">
+                        <div className="lhdn-logo">🇲🇾</div>
+                        <h2>Malaysia E-Invoice <span className="text-gradient">Compliance</span></h2>
+                        <p className="text-muted text-lg mt-2">
+                            Be ready for LHDN's mandatory e-Invoice requirements
+                        </p>
+                    </div>
+
+                    <div className="einvoice-timeline">
+                        <div className="timeline-item">
+                            <div className="timeline-date">Aug 2024</div>
+                            <div className="timeline-content card card-glass">
+                                <h4>Phase 1</h4>
+                                <p>Revenue &gt; RM100M</p>
+                            </div>
+                        </div>
+                        <div className="timeline-item">
+                            <div className="timeline-date">Jan 2025</div>
+                            <div className="timeline-content card card-glass">
+                                <h4>Phase 2</h4>
+                                <p>Revenue &gt; RM25M</p>
+                            </div>
+                        </div>
+                        <div className="timeline-item active">
+                            <div className="timeline-date">Jul 2025</div>
+                            <div className="timeline-content card card-glass">
+                                <h4>Phase 3</h4>
+                                <p>All businesses</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="einvoice-features">
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>MyInvois API Integration</span>
+                        </div>
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>Real-time Validation</span>
+                        </div>
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>QR Code Generation</span>
+                        </div>
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>Credit/Debit Notes</span>
+                        </div>
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>Self-billed Invoices</span>
+                        </div>
+                        <div className="einvoice-feature">
+                            <span className="check-icon">✓</span>
+                            <span>SST/Service Tax Ready</span>
                         </div>
                     </div>
                 </div>

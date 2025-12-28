@@ -43,6 +43,7 @@ export function Header() {
                         {!user ? (
                             <>
                                 <Link to="/#features" className="nav-link">Features</Link>
+                                <Link to="/#einvoice" className="nav-link nav-highlight">E-Invoice</Link>
                                 <Link to="/#pricing" className="nav-link">Pricing</Link>
                                 <Link to="/login" className="nav-link">Login</Link>
                                 <Link to="/subscribe" className="btn btn-primary btn-sm">Get Started</Link>

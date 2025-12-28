@@ -118,6 +118,15 @@
     .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .einvoice-timeline {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .einvoice-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 640px) {
@@ -133,4 +142,133 @@
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+
+    .hero-badges {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .einvoice-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hero Badges */
+.hero-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.lhdn-badge {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(14, 165, 233, 0.2)) !important;
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    color: #34d399 !important;
+}
+
+/* Compliance Note */
+.compliance-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compliance-icon {
+    font-size: 1.25rem;
+}
+
+.compliance-note span:last-child {
+    font-size: 0.875rem;
+    color: var(--neutral-300);
+}
+
+/* E-Invoice Section */
+.einvoice-section {
+    background: var(--neutral-900);
+}
+
+.lhdn-logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.einvoice-timeline {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.timeline-item.active {
+    opacity: 1;
+}
+
+.timeline-item.active .timeline-content {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.timeline-date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-400);
+}
+
+.timeline-content {
+    min-width: 160px;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+}
+
+.timeline-content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.timeline-content p {
+    font-size: 0.875rem;
+    color: var(--neutral-400);
+}
+
+.einvoice-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.einvoice-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+}
+
+.check-icon {
+    font-size: 1.25rem;
+    color: var(--success-400);
 }
